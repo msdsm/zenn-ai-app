@@ -60,3 +60,5 @@ if user_input := st.chat_input("入力してね"):
 with st.spinner("ChatGPT is typing..."):
   response = 
 ```
+#### `st.sidebar`
+- サイドバー表示

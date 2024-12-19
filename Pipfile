@@ -20,3 +20,4 @@ python_version = "3.12"
 [scripts]
 00 = "streamlit run 00_my_first_app.py"
 03 = "streamlit run 03_ai_chat_app.py"
+04 = "streamlit run 04_ai_chat_app.py"
