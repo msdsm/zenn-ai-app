@@ -14,6 +14,8 @@ langchain-openai = "*"
 beautifulsoup4 = "*"
 youtube-transcript-api = "*"
 pytube = "*"
+pypdf2 = "*"
+qdrant-client = "*"
 
 [dev-packages]
 
@@ -27,3 +29,5 @@ python_version = "3.12"
 06 = "streamlit run 06_web_summarizer_app.py"
 07 = "streamlit run 07_youtube_summarizer_app.py"
 08 = "streamlit run 08_long_youtube_summarizer_app.py"
+09 = "streamlit run 09_pdf_upload_app.py"
+10 = "streamlit run 10_pdf_upload_qa_app.py"

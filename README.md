@@ -11,6 +11,12 @@
 - `pipenv run 03` : `03_ai_chat_app.py`を実行
 - `pipenv run 04` : `04_ai_chat_app.py`を実行
 
+## ローカルのベクトルDB(qdrant)確認
+- 10で使う
+- `sqlite3 ./local_qdrant/collection/my_collection/storage.sqlite`で入る
+- `.tables`でテーブル表示(pointsというテーブルができているはず)
+- `select * from points;`で全部見れる
+
 ## メモ
 ###  LangChainとは
 - LLMを用いたアプリケーション開発を効率的に行うためのライブラリ
@@ -70,6 +76,11 @@ chain = load_summarize_chain(
   - `refine` : 分割されている文書を最初から順に処理して、要約した文章と次の文章をあわせて再度要約するという方式
 - chain_typeを`stuff`に指定すると上のように`prompt`引数にプロンプトを指定する
 - chain_typeを`map_reduce`に指定すると下のように`map_prompt`引数に各documentを要約する時のプロンプトを与えて、`combine_prompt`に個別の要約をつなげたものを最後に要約するときのプロンプトを与える
+
+#### RetrievalQA
+- langchainのchain
+- ベクトルDBからどのように検索するかをretrieverに指定
+- モデルをllmに指定
 
 ### streamlitメモ
 #### `st.chat_input`
