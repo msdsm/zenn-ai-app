@@ -16,6 +16,8 @@ youtube-transcript-api = "*"
 pytube = "*"
 pypdf2 = "*"
 qdrant-client = "*"
+pycryptodome = "*"
+langchain-qdrant = "*"
 
 [dev-packages]
 

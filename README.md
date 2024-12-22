@@ -101,3 +101,16 @@ with st.spinner("ChatGPT is typing..."):
 ```
 #### `st.sidebar`
 - サイドバー表示
+
+### Qdrant cloud
+- ベクトルDBを構築できるクラウド
+- ローカルのコードを以下のように変更すればよい
+```python
+def load_qdrant():
+  # 以前こう書いていたところ: client = QdrantClient(path=QDRANT_PATH)
+  # url, api_key は Qdrant Cloud から取得する
+  client = QdrantClient(
+    url="https://hogehogehogehoge.us-east-1-0.aws.cloud.qdrant.io:6333",
+    api_key="api-key-hogehogehogehoge"
+  )
+```
