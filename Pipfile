@@ -12,6 +12,8 @@ langchain-core = "*"
 openai = "*"
 langchain-openai = "*"
 beautifulsoup4 = "*"
+youtube-transcript-api = "*"
+pytube = "*"
 
 [dev-packages]
 
@@ -23,3 +25,4 @@ python_version = "3.12"
 03 = "streamlit run 03_ai_chat_app.py"
 04 = "streamlit run 04_ai_chat_app.py"
 06 = "streamlit run 06_web_summarizer_app.py"
+07 = "streamlit run 07_youtube_summarizer_app.py"

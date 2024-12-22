@@ -43,6 +43,32 @@ sk...
 sk...
 ```
 
+### langchainメモ
+#### Document Loader
+- いろいろなデータ形式のものを読み込める機能
+- 06ではYoutubeを読み込む
+- 他にも以下読み込める
+  - データ形式 : csv, html, json, pdf, excel, word, powerpoint, ...
+  - サービス : youtube, twitter, slack, discord, figma, notion, google drive, arxiv, ...
+  - クラウドサービス : S3, GCS, BigQuery, ...
+- `load()`メソッドでソースからドキュメントを読み込む
+- `load_and_split()`メソッドでソースからドキュメントを読み込みテキスト分割器を使用してチャンクサイズに分割
+- 得られる`Document`は`page_content`に生のテキストデータがあり`metadata`にテキストに関するメタデータが保存されている
+#### `load_summarize_chain()`
+- 以下のようにして使う
+```python
+chain = load_summarize_chain(
+    llm,  # e.g. ChatOpenAI(temperature=0)
+    chain_type="stuff",
+    verbose=True,
+    prompt=PROMPT
+)
+```
+- chain_typeは以下の3通り
+  - `stuff` : 最も基本的なchain_typeで与えられたDocumentをそのまま処理
+  - `map_reduce` : 複数のDocumentを個別に要約して、それらの結果をまとめて最後に全体の要約を生成
+  - `refine` : 分割されている文書を最初から順に処理して、要約した文章と次の文章をあわせて再度要約するという方式
+
 
 ### streamlitメモ
 #### `st.chat_input`
