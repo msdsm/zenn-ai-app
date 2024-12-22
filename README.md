@@ -68,7 +68,8 @@ chain = load_summarize_chain(
   - `stuff` : 最も基本的なchain_typeで与えられたDocumentをそのまま処理
   - `map_reduce` : 複数のDocumentを個別に要約して、それらの結果をまとめて最後に全体の要約を生成
   - `refine` : 分割されている文書を最初から順に処理して、要約した文章と次の文章をあわせて再度要約するという方式
-
+- chain_typeを`stuff`に指定すると上のように`prompt`引数にプロンプトを指定する
+- chain_typeを`map_reduce`に指定すると下のように`map_prompt`引数に各documentを要約する時のプロンプトを与えて、`combine_prompt`に個別の要約をつなげたものを最後に要約するときのプロンプトを与える
 
 ### streamlitメモ
 #### `st.chat_input`
