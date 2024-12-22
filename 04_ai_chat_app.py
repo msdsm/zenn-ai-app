@@ -3,7 +3,8 @@ import streamlit as st
 # from langchain_community.chat_models import ChatOpenAI
 from langchain_openai import ChatOpenAI
 from langchain.schema import (SystemMessage, HumanMessage, AIMessage)
-from langchain.callbacks import get_openai_callback
+# from langchain.callbacks import get_openai_callback
+from langchain_community.callbacks.manager import get_openai_callback
 
 def init_page():
     st.set_page_config(
