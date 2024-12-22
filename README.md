@@ -5,11 +5,17 @@
 
 ## 環境構築
 - `pipenv install`
+- `.env.sample`を`.env`に変更してOPENAI_API_KEY設定
 
 ## script
-- `pipenv run 00` : `00_my_first_app.py`を実行
-- `pipenv run 03` : `03_ai_chat_app.py`を実行
-- `pipenv run 04` : `04_ai_chat_app.py`を実行
+- `pipenv run 00` : `src/00_my_first_app.py`を実行
+- `pipenv run 03` : `src/03_ai_chat_app.py`を実行
+- `pipenv run 04` : `src/04_ai_chat_app.py`を実行
+- `pipenv run 06` :  `src/06_web_summarizer_app.py`を実行
+- `pipenv run 07` :  `src/07_youtube_summarizer_app.py`を実行
+- `pipenv run 08` :  `src/08_long_youtube_summarizer_app.py`を実行
+- `pipenv run 09` :  `src/09_pdf_upload_app.py`を実行
+- `pipenv run 10` :  `src/10_pdf_upload_qa_app.py`を実行
 
 ## ローカルのベクトルDB(qdrant)確認
 - 10で使う
